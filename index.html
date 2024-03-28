@@ -6,6 +6,15 @@
 
 <body>
   <script>
+    function runLevel(level, Display) {
+      let display = new Display(document.body, level);
+      let state = State.start(level);
+      let ending = 1;
+      return new Promise(resolve => {
+        
+      })
+    }
+
     async function runGame(plans, Display) {
       let lives = 3;
       for (let level = 0; level < plan.length && lives > 0;) {
