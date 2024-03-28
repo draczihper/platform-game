@@ -7,5 +7,13 @@
 <body>
   <script>
     runGame(GAME_LEVELS, DOMDisplay);
+    async function runGame(plans, Display) {
+      let lives = 3;
+      for (let level = 0; level < plan.length && lives > 0;) {
+         console.log(`Level ${level + 1}, lives: ${lives}`);
+         let status = await runLevel (new Level(plans[level]), Display);
+      }
+    }
+
   </script>
 </body>
